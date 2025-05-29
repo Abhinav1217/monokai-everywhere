@@ -34,9 +34,9 @@ themes, patches, and hacks for our favorite apps and tools.
 │   ├── web/        # Stylus / UserCSS for github.com  ← current content
 │   ├── desktop/    # Electron CSS-var patcher (WANTED)
 │   └── mobile/     # Mobile tweaks / screenshots (WANTED)
-├── gitkraken/      # (WANTED) Desktop patcher
-├── vscode/         # (WANTED) VS Code color-theme JSON
-├── slack/          # (WANTED) Web / desktop themes
+├── gitkraken/      # Desktop patcher
+├── vscode/         # VS Code color-theme JSON
+├── slack/          # Web / desktop themes
 ├── tools/          # Reusable unpackers, injection helpers, etc.
 └── docs/           # Contributing guide, overview, FAQ
 
