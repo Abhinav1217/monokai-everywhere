@@ -1,129 +1,168 @@
 /* ==UserStyle==
 @name           GitHub — Monokai Pro (Dark override)
 @namespace      github.com
-@version        1.0.0
+@version        1.0.1
 @description    GitHub Dark Theme overridden with Monokai Pro palette (from PyCharm/VS Code) and custom modern fonts.
 @author         diprog
 ==/UserStyle== */
-
 /* ─── Google Fonts: Droid Sans, Inter, JetBrains Mono ─── */
 @import url('https://fonts.googleapis.com/css2?family=Droid+Sans:wght@400;700&family=Inter:wght@400;700&family=JetBrains+Mono:wght@400;700&display=swap');
 
 @-moz-document domain("github.com") {
 
-  /* ─── Dark Theme Variables Override (Monokai Pro) ─── */
-  [data-color-mode="dark"][data-dark-theme="dark"],
-  [data-color-mode="auto"][data-dark-theme="dark"] {
+    /* ─── Dark Theme Variables Override (Monokai Pro) ─── */
+    [data-color-mode="dark"][data-dark-theme="dark"],
+    [data-color-mode="auto"][data-dark-theme="dark"] {
 
-    /* ─── Monokai Pro Palette ─── */
-    --mp-bg          : #282222;
-    --mp-bg-alt      : #211C1C;
-    --mp-fg          : #fcfcfa;
-    --mp-fg-muted    : #B6B1B0;
-    --mp-pink        : #ff6188;
-    --mp-orange      : #fc9867;
-    --mp-yellow      : #ffd866;
-    --mp-warm-yellow : #F9CC6C;
-    --mp-green       : #ADDA78;
-    --mp-cyan        : #78dce8;
-    --mp-purple      : #ab9df2;
+        /* ─── Monokai Pro Palette ─── */
+        --mp-bg: #282222;
+        --mp-bg-alt: #211C1C;
+        --mp-fg: #fcfcfa;
+        --mp-fg-muted: #B6B1B0;
+        --mp-pink: #ff6188;
+        --mp-orange: #fc9867;
+        --mp-yellow: #ffd866;
+        --mp-warm-yellow: #F9CC6C;
+        --mp-green: #ADDA78;
+        --mp-cyan: #85DACC;
+        --mp-purple: #ab9df2;
 
-    /* ─── Font Stacks ─── */
-    --fontStack-monospace: "JetBrains Mono", "Fira Code", "Droid Sans Mono", ui-monospace,
-                           SFMono-Regular, SF Mono, Menlo, Consolas, "Liberation Mono", monospace;
+        /* ─── Font Stacks ─── */
+        --fontStack-monospace: "JetBrains Mono", "Fira Code", "Droid Sans Mono", ui-monospace,
+        SFMono-Regular, SF Mono, Menlo, Consolas, "Liberation Mono", monospace;
 
-    --fontStack-sansSerif: "Droid Sans", "Inter", -apple-system, BlinkMacSystemFont,
-                           "Segoe UI", "Noto Sans", Helvetica, Arial, sans-serif,
-                           "Apple Color Emoji", "Segoe UI Emoji";
+        --fontStack-sansSerif: "Droid Sans", "Inter", -apple-system, BlinkMacSystemFont,
+        "Segoe UI", "Noto Sans", Helvetica, Arial, sans-serif,
+        "Apple Color Emoji", "Segoe UI Emoji";
 
-    --fontStack-sansSerifDisplay: var(--fontStack-sansSerif);
-    --fontStack-system          : var(--fontStack-sansSerif);
+        --fontStack-sansSerifDisplay: var(--fontStack-sansSerif);
+        --fontStack-system: var(--fontStack-sansSerif);
 
-    /* ─── Background Colors ─── */
-    --bgColor-default        : var(--mp-bg);
-    --bgColor-muted          : var(--mp-bg-alt);
-    --bgColor-emphasis       : #423C3C;
-    --bgColor-inset          : var(--mp-bg-alt);
-    --bgColor-card           : var(--mp-bg-alt);
-    --bgColor-overlay        : #383538;
-    --bgColor-accent-emphasis: var(--mp-warm-yellow);
-    --bgColor-accent-muted   : #F9CC6C1a;
-    --bgColor-disabled       : #332C2C;
+        /* ─── Background Colors ─── */
+        --bgColor-default: var(--mp-bg);
+        --bgColor-muted: var(--mp-bg-alt);
+        --bgColor-emphasis: #423C3C;
+        --bgColor-inset: var(--mp-bg-alt);
+        --bgColor-card: var(--mp-bg-alt);
+        --bgColor-overlay: #383538;
+        --bgColor-accent-emphasis: var(--mp-warm-yellow);
+        --bgColor-accent-muted: #F9CC6C1a;
+        --bgColor-disabled: #332C2C;
 
-    /* ─── Foreground Colors ─── */
-    --fgColor-default    : var(--mp-fg);
-    --fgColor-muted      : var(--mp-fg-muted);
-    --fgColor-disabled   : #5c5a5c;
-    --fgColor-accent     : var(--mp-warm-yellow);
-    --fgColor-link       : var(--mp-cyan);
-    --fgColor-success    : var(--mp-green);
-    --fgColor-danger     : var(--mp-pink);
-    --fgColor-attention  : var(--mp-yellow);
-    --fgColor-onEmphasis : #000000;
+        /* ─── Foreground Colors ─── */
+        --fgColor-default: var(--mp-fg);
+        --fgColor-muted: var(--mp-fg-muted);
+        --fgColor-disabled: #5c5a5c;
+        --fgColor-accent: var(--mp-warm-yellow);
+        --fgColor-link: var(--mp-cyan);
+        --fgColor-success: var(--mp-green);
+        --fgColor-danger: var(--mp-pink);
+        --fgColor-attention: var(--mp-yellow);
+        --fgColor-onEmphasis: #000000;
 
-    /* ─── Border Colors ─── */
-    --borderColor-default        : #3a383b;
-    --borderColor-muted          : #444245;
-    --borderColor-accent-muted   : var(--mp-cyan);
-    --borderColor-accent-emphasis: var(--mp-cyan);
+        /* ─── Border Colors ─── */
+        --borderColor-default: #3a383b;
+        --borderColor-muted: #444245;
+        --borderColor-accent-muted: var(--mp-cyan);
+        --borderColor-accent-emphasis: var(--mp-cyan);
 
-    /* ─── Controls & Buttons ─── */
-    --control-bgColor-rest     : #403838;
-    --control-bgColor-hover    : #595151;
-    --control-bgColor-active   : #464347;
-    --control-borderColor-rest : #595151;
+        /* ─── Controls & Buttons ─── */
+        --control-bgColor-rest: #403838;
+        --control-bgColor-hover: #595151;
+        --control-bgColor-active: #464347;
+        --control-borderColor-rest: #595151;
 
-    --button-default-bgColor-rest    : var(--control-bgColor-rest);
-    --button-default-borderColor-rest: var(--control-borderColor-rest);
-    --button-danger-bgColor-rest     : var(--mp-pink);
-    --button-danger-fgColor-rest     : var(--mp-bg);
+        --button-default-bgColor-rest: var(--control-bgColor-rest);
+        --button-default-borderColor-rest: var(--control-borderColor-rest);
+        --button-danger-bgColor-rest: var(--mp-pink);
+        --button-danger-fgColor-rest: var(--mp-bg);
 
-    --buttonCounter-default-bgColor-rest: #665D5D;
+        --buttonCounter-default-bgColor-rest: #665D5D;
 
-    --tooltip-fgColor: #93898A;
+        --tooltip-fgColor: #93898A;
 
-    /* ─── Code Syntax Highlighting ─── */
-    --codeMirror-bgColor                : var(--mp-bg);
-    --codeMirror-fgColor                : var(--mp-fg);
-    --codeMirror-cursor-fgColor         : var(--mp-fg);
-    --codeMirror-activeline-bgColor     : #363336;
+        /* ─── Contribution Table Colors ─── */
+        --contribution-default-bgColor-0: #353030;
+        --contribution-default-bgColor-1: #586a46;
+        --contribution-default-bgColor-2: #6f854f;
+        --contribution-default-bgColor-3: #87a862;
+        --contribution-default-bgColor-4: #ADDA78;
 
-    --codeMirror-syntax-fgColor-comment : var(--mp-fg-muted);
-    --codeMirror-syntax-fgColor-keyword : var(--mp-pink);
-    --codeMirror-syntax-fgColor-storage : var(--mp-pink);
-    --codeMirror-syntax-fgColor-constant: var(--mp-purple);
-    --codeMirror-syntax-fgColor-string  : var(--mp-yellow);
-    --codeMirror-syntax-fgColor-variable: var(--mp-orange);
-    --codeMirror-syntax-fgColor-entity  : var(--mp-green);
-    --codeMirror-syntax-fgColor-support : var(--mp-cyan);
+        /* ─── Code Syntax Highlighting ─── */
+        --codeMirror-bgColor: var(--mp-bg);
+        --codeMirror-fgColor: var(--mp-fg);
+        --codeMirror-cursor-fgColor: var(--mp-fg);
+        --codeMirror-activeline-bgColor: #363336;
 
-    /* ─── ANSI Terminal Colors ─── */
-    --color-ansi-black         : #3e3a40;
-    --color-ansi-black-bright  : #5c585e;
-    --color-ansi-red           : var(--mp-pink);
-    --color-ansi-red-bright    : #ff91ab;
-    --color-ansi-green         : var(--mp-green);
-    --color-ansi-green-bright  : #c6f6a1;
-    --color-ansi-yellow        : var(--mp-yellow);
-    --color-ansi-yellow-bright : #ffe599;
-    --color-ansi-blue          : var(--mp-cyan);
-    --color-ansi-blue-bright   : #a4eaf3;
-    --color-ansi-magenta       : var(--mp-purple);
-    --color-ansi-magenta-bright: #cbbaf7;
-    --color-ansi-cyan          : var(--mp-cyan);
-    --color-ansi-cyan-bright   : #a4eaf3;
-    --color-ansi-white         : var(--mp-fg);
-    --color-ansi-white-bright  : #ffffff;
-  }
+        --codeMirror-syntax-fgColor-comment: var(--mp-fg-muted);
+        --codeMirror-syntax-fgColor-keyword: var(--mp-pink);
+        --codeMirror-syntax-fgColor-storage: var(--mp-pink);
+        --codeMirror-syntax-fgColor-constant: var(--mp-purple);
+        --codeMirror-syntax-fgColor-string: var(--mp-yellow);
+        --codeMirror-syntax-fgColor-variable: var(--mp-orange);
+        --codeMirror-syntax-fgColor-entity: var(--mp-green);
+        --codeMirror-syntax-fgColor-support: var(--mp-cyan);
 
-  /* ─── Miscellaneous ─── */
-  .turbo-progress-bar {
-    background: var(--mp-warm-yellow);
-  }
+        /* ─── ANSI Terminal Colors ─── */
+        --color-ansi-black: #3e3a40;
+        --color-ansi-black-bright: #5c585e;
+        --color-ansi-red: var(--mp-pink);
+        --color-ansi-red-bright: #ff91ab;
+        --color-ansi-green: var(--mp-green);
+        --color-ansi-green-bright: #c6f6a1;
+        --color-ansi-yellow: var(--mp-yellow);
+        --color-ansi-yellow-bright: #ffe599;
+        --color-ansi-blue: var(--mp-cyan);
+        --color-ansi-blue-bright: #a4eaf3;
+        --color-ansi-magenta: var(--mp-purple);
+        --color-ansi-magenta-bright: #cbbaf7;
+        --color-ansi-cyan: var(--mp-cyan);
+        --color-ansi-cyan-bright: #a4eaf3;
+        --color-ansi-white: var(--mp-fg);
+        --color-ansi-white-bright: #ffffff;
 
-  .markdown-body, body {
-    font-family: "Inter", "Droid Sans", -apple-system, BlinkMacSystemFont,
-                 "Segoe UI", "Noto Sans", Helvetica, Arial, sans-serif,
-                 "Apple Color Emoji", "Segoe UI Emoji";
-  }
+        /* ─── PrettyLights Syntax Colors ─── */
+        --color-prettylights-syntax-brackethighlighter-angle: var(--mp-fg-muted);
+        --color-prettylights-syntax-brackethighlighter-unmatched: var(--mp-pink);
+        --color-prettylights-syntax-carriage-return-bg: var(--mp-pink);
+        --color-prettylights-syntax-carriage-return-text: var(--mp-fg);
+        --color-prettylights-syntax-comment: var(--mp-fg-muted);
+        --color-prettylights-syntax-constant: var(--mp-purple);
+        --color-prettylights-syntax-constant-other-reference-link: var(--mp-cyan);
+        --color-prettylights-syntax-entity: var(--mp-green);
+        --color-prettylights-syntax-entity-tag: var(--mp-green);
+        --color-prettylights-syntax-invalid-illegal-bg: var(--mp-pink);
+        --color-prettylights-syntax-invalid-illegal-text: var(--mp-fg);
+        --color-prettylights-syntax-keyword: var(--mp-pink);
+        --color-prettylights-syntax-markup-bold: var(--mp-fg);
+        --color-prettylights-syntax-markup-changed-bg: var(--mp-orange);
+        --color-prettylights-syntax-markup-changed-text: var(--mp-fg);
+        --color-prettylights-syntax-markup-deleted-bg: var(--mp-pink);
+        --color-prettylights-syntax-markup-deleted-text: var(--mp-fg);
+        --color-prettylights-syntax-markup-heading: var(--mp-cyan);
+        --color-prettylights-syntax-markup-ignored-bg: var(--mp-bg-alt);
+        --color-prettylights-syntax-markup-ignored-text: var(--mp-fg-muted);
+        --color-prettylights-syntax-markup-inserted-bg: var(--mp-green);
+        --color-prettylights-syntax-markup-inserted-text: var(--mp-bg);
+        --color-prettylights-syntax-markup-italic: var(--mp-fg-muted);
+        --color-prettylights-syntax-markup-list: var(--mp-yellow);
+        --color-prettylights-syntax-meta-diff-range: var(--mp-purple);
+        --color-prettylights-syntax-storage-modifier-import: var(--mp-fg);
+        --color-prettylights-syntax-string: var(--mp-yellow);
+        --color-prettylights-syntax-string-regexp: var(--mp-cyan);
+        --color-prettylights-syntax-sublimelinter-gutter-mark: var(--mp-bg-alt);
+        --color-prettylights-syntax-variable: var(--mp-orange);
+    }
+
+    /* ─── Miscellaneous ─── */
+    .turbo-progress-bar {
+        background: var(--mp-warm-yellow);
+    }
+
+    .markdown-body,
+    body {
+        font-family: "Inter", "Droid Sans", -apple-system, BlinkMacSystemFont,
+        "Segoe UI", "Noto Sans", Helvetica, Arial, sans-serif,
+        "Apple Color Emoji", "Segoe UI Emoji";
+    }
 }
