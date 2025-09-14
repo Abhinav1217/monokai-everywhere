@@ -48,6 +48,7 @@
         --bgColor-accent-emphasis: var(--mp-warm-yellow);
         --bgColor-accent-muted: #F9CC6C1a;
         --bgColor-disabled: #332C2C;
+        --overlay-bgColor: var(--mp-bg);
 
         /* ─── Foreground Colors ─── */
         --fgColor-default: var(--mp-fg);
