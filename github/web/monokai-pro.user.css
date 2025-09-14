@@ -159,6 +159,10 @@
         background: var(--mp-warm-yellow);
     }
 
+    .Overlay {
+		background: var(--mp-bg);
+	}
+
     .markdown-body,
     body {
         font-family: "Inter", "Droid Sans", -apple-system, BlinkMacSystemFont,
